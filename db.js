@@ -1,45 +1,37 @@
 const connection = require('./connection/connection')
 const data = require('./data')
 
-async function dropTable() {
-  const query = `DROP TABLE IF EXISTS ods`
-  connection.query(query)
-}
+const {
+  queryInsertMetas,
+  queryInsertObjetivos,
+  queryInsertIndicadores,
+  queryInsertODS,
+  deleteQuerys,
+  createQuerys,
+  queryGetObjetivos,
+  queryGetIndicadores
+} = require('./querys.js');
 
-async function createTable() {
-  const query = `
-    CREATE TABLE ods (
-      id INT AUTO_INCREMENT PRIMARY KEY,
-      codigo VARCHAR(100),
-      regiao VARCHAR(100),
-      taxa DOUBLE,
-      ano INT
-    )
-  `
-  connection.query(query)
-}
+const dropTables = async () => await deleteQuerys.map(async query => await connection.query(query))
+const createTable = async () => await createQuerys.map(async query => await connection.query(query))
 
-async function insertDatasets() {
-  const query = "INSERT INTO ods (codigo, regiao, taxa, ano) VALUES (?, ?, ?, ?)"
-  data.getData().map(row => connection.query(query, row))
-}
+//Insert DataSets
+const insertMetas = async () => await data.getMetas().map(async row => await connection.query(queryInsertMetas, row))
+const insertObjetivos = async () => await data.getObjetivos().map(async row => await connection.query(queryInsertObjetivos, row))
+const insertIndicadores = async () => await data.getIndicadores().map(async row => await connection.query(queryInsertIndicadores, row))
+const insertOds = async () => await data.getODS().map(async row => await connection.query(queryInsertODS, row))
 
-async function getObjeivos() {
-  const query = "SELECT * FROM objetivos;";
-  const objetivos = await connection.query(query);
-  return objetivos[0];
-}
+const getObjetivos = async () => (await connection.query(queryGetObjetivos))[0];
 
-async function getIndicador(id) {
-  const query = "SELECT * FROM indicador WHERE id=?;";
-  const indicador = await connection.query(query, [id]);
-  return indicador[0];
-}
+const getIndicador = async (id) => (await connection.query(queryGetIndicadores, [id]))[0];
 
 module.exports = {
-  getObjeivos,
+  getObjetivos,
   getIndicador,
   createTable,
-  dropTable,
-  insertDatasets
+  dropTables,
+  insertMetas,
+  insertObjetivos,
+  insertIndicadores,
+  insertOds
 };

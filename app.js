@@ -3,24 +3,15 @@ const app = express();
 const db = require("./db");
 app.use(express.json());
 
-app.delete("/table", async (req, res) => {
-  await db.dropTable()
-  res.sendStatus(204)
-})
+app.delete("/table", async (req, res) => { await db.dropTables(); res.sendStatus(204) })
+app.post("/table", async (req, res) => { await db.createTable(); res.sendStatus(201) })
+app.post("/metas", async (req, res) => { await db.insertMetas(); res.sendStatus(201) })
+app.post("/objetivos", async (req, res) => { await db.insertObjetivos(); res.sendStatus(201) })
+app.post("/indicadores", async (req, res) => { await await db.insertIndicadores(); res.sendStatus(201) })
+app.post("/ods", async (req, res) => { await db.insertOds(); res.sendStatus(201) })
 
-app.post("/table", async (req, res) => {
-  await db.createTable()
-  await db.insertDatasets()
-  res.sendStatus(201)
-})
+app.get("/objetivos", async (req, res) => res.json(await db.getObjetivos()))
 
-app.get("/objetivos", async (req, res) => {
-  await res.json(db.getObjeivos);
-})
+app.get("/indicador/:id", async (req, res) => res.json(await db.getIndicador(req.params.id)))
 
-app.get("/indicador/:id", async (req, res) => {
-  //const id = parseInt(req.params.id);
-  //await res.json(db.getIndicador(id));
-});
-
-app.listen(3001, () => console.log("App esta funcionando"))
+app.listen(3001, () => console.log("MICRSSERVICE-GS"))
