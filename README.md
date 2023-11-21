@@ -7,5 +7,9 @@
 ### E crie 5 variáveis PORT, HOST, USER, DATABASE, PASSWORD
 <img src="./imgsReadme/envexample.png" alt="env example">
 #### Agora preenchar com suas informações de conexão
-<img src="./imgsReadme/env.png" alt="env example">
+<img src="./imgsReadme/env.png" alt="env">
+### Para acessar os objetivos abra o postman e crie requisião get e cole esse endereço com sua porta http://localhost:${SuaPorta}/objetivos
+<img src="./imgsReadme/objetivos.png" alt="objetivos">
+### Para acessar os objetivos abra o postman e crie requisião get e cole esse endereço com sua porta http://localhost:${SuaPorta}/indicador/${id}
+<img src="./imgsReadme/indicador.png" alt="indicador">
 
