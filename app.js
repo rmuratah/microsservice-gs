@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const db = require("./db");
+require("dotenv").config()
+
 app.use(express.json());
 
 app.delete("/table", async (req, res) => { await db.dropTables(); res.sendStatus(204) })
@@ -14,4 +16,4 @@ app.get("/objetivos", async (req, res) => res.json(await db.getObjetivos()))
 
 app.get("/indicador/:id", async (req, res) => res.json(await db.getIndicador(req.params.id)))
 
-app.listen(3001, () => console.log("MICRSSERVICE-GS"))
+app.listen(process.env.PORT, () => console.log("MICRSSERVICE-GS"))
