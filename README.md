@@ -6,7 +6,7 @@
 
 ### 87875 - Matheus Bettim Carvalho Neto
 
-### 
+### 87243 - Renan Prado Gonzalez
 
 ## Como iniciar o projeto
 
