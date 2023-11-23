@@ -8,7 +8,9 @@
 
 ### 
 
-## Vá para algum repositório do seu computador abra o Visual Studio Code, abra o terminal e digite git clone <https://github.com/rmuratah/microsservice-gs.git> e depois digite cd .\microsservice-gs\
+## Como iniciar o projeto
+
+### Vá para algum repositório do seu computador abra o Visual Studio Code, abra o terminal e digite git clone <https://github.com/rmuratah/microsservice-gs.git> e depois digite cd .\microsservice-gs\
 
 ### Digite npm install
 
