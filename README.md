@@ -6,7 +6,7 @@
 
 ### Para iniciar o projeto digite npm start
 
-### Agora precisamos configurar o banco de dados do projeto, na raiz do projeto cire um arquivo .env
+### Agora precisamos configurar o banco de dados do projeto, na raiz do projeto crie um arquivo .env
 
 ### Primeiro Baixe o mysqlworkbench <https://www.mysql.com/downloads/>
 
@@ -18,10 +18,36 @@
 
 <img src="./imgsReadme/env.png" alt="env">
 
+### Agora crie as tabelas
+
+<img src="./imgsReadme/creaTable.png" alt="env">
+
+### Agora vamos inserir os dados nas tabelas
+
+### Primeiro vamos inserir as metas
+
+<img src="./imgsReadme/creaTable.png" alt="env">
+
+### Primeiro vamos inserir as metas
+
+<img src="./imgsReadme/creaTable.png" alt="env">
+
+### Primeiro vamos inserir os objetivos
+
+<img src="./imgsReadme/objetivosInsert.png" alt="env">
+
+### Primeiro vamos inserir os indicadores
+
+<img src="./imgsReadme/indicadores.png" alt="env">
+
+### Primeiro vamos inserir os ods
+
+<img src="./imgsReadme/ods.png" alt="env">
+
 ### Para acessar os objetivos abra o postman e crie requisião get e cole esse endereço com sua porta <http://localhost:${SuaPorta}/objetivos>
 
 <img src="./imgsReadme/objetivos.png" alt="objetivos">
 
-### Para acessar os objetivos abra o postman e crie requisião get e cole esse endereço com sua porta <http://localhost:${SuaPorta}/indicador/${id}>
+### Para acessar os indicadores abra o postman e crie requisião get e cole esse endereço com sua porta <http://localhost:${SuaPorta}/indicador/${id}>
 
 <img src="./imgsReadme/indicador.png" alt="indicador">
