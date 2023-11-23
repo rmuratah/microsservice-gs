@@ -38,19 +38,15 @@
 
 <img src="./imgsReadme/creaTable.png" alt="env">
 
-### Primeiro vamos inserir as metas
-
-<img src="./imgsReadme/creaTable.png" alt="env">
-
-### Primeiro vamos inserir os objetivos
+### Depois vamos inserir os objetivos
 
 <img src="./imgsReadme/objetivosInsert.png" alt="env">
 
-### Primeiro vamos inserir os indicadores
+### Depois vamos inserir os indicadores
 
 <img src="./imgsReadme/indicadores.png" alt="env">
 
-### Primeiro vamos inserir os ods
+### Depois vamos inserir os ods
 
 <img src="./imgsReadme/ods.png" alt="env">
 
