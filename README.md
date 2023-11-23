@@ -1,5 +1,13 @@
 # microsservice-gs
 
+## Nome dos integrantes: 
+
+### 88747 - RAFAEL HIDEKI MURATA
+
+### 87875 - Matheus Bettim Carvalho Neto
+
+### 
+
 ## Vá para algum repositório do seu computador abra o Visual Studio Code, abra o terminal e digite git clone <https://github.com/rmuratah/microsservice-gs.git> e depois digite cd .\microsservice-gs\
 
 ### Digite npm install
